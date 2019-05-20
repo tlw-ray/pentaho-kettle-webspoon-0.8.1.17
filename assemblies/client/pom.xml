@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <artifactId>pdi-ce</artifactId>
+  <version>8.1.0.0-365-17</version>
+  <packaging>pom</packaging>
+
+  <name>PDI Client Community Edition</name>
+
+  <parent>
+    <artifactId>pdi-assemblies</artifactId>
+    <groupId>org.pentaho.di</groupId>
+    <version>8.1.0.0-365</version>
+  </parent>
+
+  <properties>
+    <ael.version>8.1.0.0-365</ael.version>
+
+    <pentaho-karaf.version>8.1.0.0-365</pentaho-karaf.version>
+    <pentaho-launcher.version>8.1.0.0-365</pentaho-launcher.version>
+    <oss-licenses.version>8.1.0.0-365</oss-licenses.version>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.pentaho.di</groupId>
+      <artifactId>pdi-libs</artifactId>
+      <version>${project.version}</version>
+      <type>zip</type>
+      <exclusions>
+        <exclusion>
+          <groupId>*</groupId>
+          <artifactId>*</artifactId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+    <dependency>
+      <groupId>org.pentaho.di</groupId>
+      <artifactId>pdi-static</artifactId>
+      <version>${project.version}</version>
+      <type>zip</type>
+      <exclusions>
+        <exclusion>
+          <groupId>*</groupId>
+          <artifactId>*</artifactId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+    <dependency>
+      <groupId>pentaho</groupId>
+      <artifactId>oss-licenses</artifactId>
+      <version>${oss-licenses.version}</version>
+      <type>zip</type>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-assembly-plugin</artifactId>
+        <configuration>
+          <finalName>spoon</finalName>
+          <appendAssemblyId>false</appendAssemblyId>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+</project>

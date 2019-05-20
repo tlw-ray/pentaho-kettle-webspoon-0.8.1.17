@@ -1,0 +1,96 @@
+<translator-config>
+
+  <system-key-prefix>System</system-key-prefix>
+  <reference-locale>en_US</reference-locale>
+
+  <source-directories>
+
+    <root>core/src</root>
+    <root>engine/src</root>
+    <root>ui/src</root>
+
+    <root>plugins/kettle-gpload-plugin/src</root>
+    <root>plugins/star-modeler/src</root>
+    <root>plugins/market/src</root>
+    <root>plugins/kettle-palo-plugin/src</root>
+    <root>plugins/kettle-openerp-plugin/src</root>
+    <root>plugins/kettle-hl7-plugin/src</root>
+    <root>plugins/kettle5-log4j-plugin/src</root>
+
+  </source-directories>
+  
+  <scan-phrases>
+    <scan-phrase>BaseMessages.getString( PKG,</scan-phrase>
+  </scan-phrases>
+  
+  <locale-list>
+    <locale> <code>en_US</code> <language>English</language> <country>United States of America</country> </locale>
+    <locale> <code>fr_FR</code> <language>French</language> <country>France</country> </locale>
+    <locale> <code>it_IT</code> <language>Italian</language> <country>Italy</country> </locale>
+    <locale> <code>es_AR</code> <language>Spanish</language> <country>Argentina</country> </locale>
+    <locale> <code>de_DE</code> <language>German</language> <country>Germany</country> </locale>
+    <locale> <code>es_ES</code> <language>Spanish</language> <country>Spain</country> </locale>
+    <locale> <code>zh_CN</code> <language>Simplified Chinese</language> <country>China</country> </locale>
+    <locale> <code>nl_NL</code> <language>Dutch</language> <country>The Netherlands</country> </locale>
+    <locale> <code>pt_BR</code> <language>Portuguese</language> <country>Brazil</country> </locale>
+    <locale> <code>pt_PT</code> <language>Portuguese</language> <country>Portugal</country> </locale>
+    <locale> <code>ja_JP</code> <language>Japanese</language> <country>Japan</country> </locale>
+    <locale> <code>ko_KR</code> <language>Korean</language> <country>Korea</country> </locale>
+  </locale-list>
+  
+  <files-to-avoid>
+    <filename>MessagesSourceCrawler.java</filename>
+    <filename>KeyOccurence.java</filename>
+    <filename>Translator.java</filename>
+    <filename>MenuHelper.java</filename>
+    <filename>Messages.java</filename>
+    <filename>XulMessages.java</filename>
+    <filename>AnnotatedStepsConfigManager.java</filename>
+    <filename>AnnotatedJobConfigManager.java</filename>
+    <filename>AnnotatedRepositoriesConfigManager.java</filename>
+    <filename>JobEntryValidatorUtils.java</filename>
+    <filename>Const.java</filename>
+    <filename>XulHelper.java</filename>
+    <filename>XulDatabaseExplorerDialog.java</filename>
+    <filename>XulSpoonResourceBundle.java</filename>
+    <filename>BasePluginType.java</filename>
+    <filename>BrowseController.java</filename>
+    <filename>FileOverwriteDialogController.java</filename>
+    <filename>BaseStepMeta.java</filename>
+    <filename>DataHandler.java</filename>
+    <filename>FragmentHandler.java</filename>
+    <filename>Launch.java</filename>
+    <filename>HelpUtils.java</filename>
+    
+  </files-to-avoid>
+  
+  <xml-folders-to-scan>
+    <xml-folder-to-scan> 
+       <folder>assembly/package-res/ui</folder> 
+       <wildcard>.*\.xul$</wildcard>
+       <key-prefix>%</key-prefix>
+       <package-default>org.pentaho.di.ui.spoon</package-default>
+       <package-source-folder>ui/src</package-source-folder>
+       <package-exceptions>
+         <package-exception>  
+           <starts-with>JobGraph.</starts-with>  
+           <package>org.pentaho.di.ui.spoon.job</package>  
+         </package-exception>
+         <package-exception>  
+           <starts-with>repository-login-toolbar</starts-with>  
+           <package>org.pentaho.di.ui.repository.dialog</package>  
+         </package-exception>
+       </package-exceptions>
+       <elements-to-scan> 
+         <element-to-scan> <element>menu</element> <tag></tag> <attribute>label</attribute> </element-to-scan> 
+         <element-to-scan> <element>menuitem</element> <tag></tag> <attribute>label</attribute> </element-to-scan>
+         <element-to-scan> <element>toolbar</element> <tag></tag> <attribute>label</attribute> </element-to-scan>
+         <element-to-scan> <element>toolbar</element> <tag></tag> <attribute>tooltiptext</attribute> </element-to-scan>
+         <element-to-scan> <element>toolbarbutton</element> <tag></tag> <attribute>label</attribute> </element-to-scan>
+         <element-to-scan> <element>toolbarbutton</element> <tag></tag> <attribute>tooltiptext</attribute> </element-to-scan>
+       </elements-to-scan>
+     </xml-folder-to-scan>
+    
+  </xml-folders-to-scan>
+  
+</translator-config>

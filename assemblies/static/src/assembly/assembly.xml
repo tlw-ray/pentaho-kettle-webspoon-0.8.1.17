@@ -1,0 +1,45 @@
+<assembly xmlns="http://maven.apache.org/ASSEMBLY/2.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/ASSEMBLY/2.0.0 http://maven.apache.org/xsd/assembly-2.0.0.xsd">
+  <id>static</id>
+  <formats>
+    <format>zip</format>
+  </formats>
+  <includeBaseDirectory>false</includeBaseDirectory>
+  <fileSets>
+    <!-- filtered resources -->
+    <fileSet>
+      <directory>${project.basedir}/src/main/resources-filtered</directory>
+      <outputDirectory>.</outputDirectory>
+      <filtered>true</filtered>
+    </fileSet>
+    <!-- docs -->
+    <fileSet>
+      <directory>${project.basedir}/src/main/resources</directory>
+      <outputDirectory>.</outputDirectory>
+      <includes>
+        <include>docs/**</include>
+      </includes>
+    </fileSet>
+
+    <!-- the remaining static resources -->
+    <fileSet>
+      <directory>${project.basedir}/src/main/resources</directory>
+      <outputDirectory>WEB-INF/classes</outputDirectory>
+      <includes>
+        <include>ui/*</include>
+      </includes>
+    </fileSet>
+    <fileSet>
+      <directory>${project.basedir}/src/main/resources/classes</directory>
+      <outputDirectory>WEB-INF/classes</outputDirectory>
+      <includes>
+        <include>log4j.xml</include>
+      </includes>
+    </fileSet>
+    <!-- the staging dir -->
+    <fileSet>
+      <directory>${assembly.dir}</directory>
+      <outputDirectory>.</outputDirectory>
+    </fileSet>
+  </fileSets>
+</assembly>
